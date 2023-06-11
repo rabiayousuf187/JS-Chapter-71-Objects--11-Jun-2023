@@ -42,5 +42,28 @@ std1.enroll("regitered", "2023-01-01")
 console.log("std1 == ",std1);
 
 
+class Car{
+    constructor(name, model, price){
+        this.name = name;
+        this.model = model;
+        this.price = price;
+    }
+    hasColor(){
+       return this.color;
+    }
+}
+
+Car.prototype.color = "Red";
+let car1 = new Car("Corolla", "df250" , 545);
+console.log("car1 == ",car1.color);
+
+let car2 = new Car("Honda Civic", "df250" , 545);
+console.log("car2 == ",car2.color);
+console.log("car2 has Color Property == ","color" in car2);
+console.log("car2 has Price Property check via .hasOwnProperty(prop)) == ",car2.hasOwnProperty("price"));
+console.log(`${car2.name} has ${car2.hasColor()} color.`);
+
+
+
 
 
